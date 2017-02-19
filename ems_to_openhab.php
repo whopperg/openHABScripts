@@ -1,18 +1,18 @@
 #!/usr/bin/php -q
+<?php
 ####################
 # This Script is intended to use with ems-collector (see https://github.com/maniac103/ems-collector), 
 # specificly the mySQL Database that you could configure with it.
 #
 # Put this script somewhere you want and create a cron entry for it:
 # crontab -e
-# * * * * * /opt/openhab2/etc/ems.php >/dev/null 2>&1
+# * * * * * /path/to/ems_to_openhab.php >/dev/null 2>&1
 # this executes the script every minute. feel free to change it.
 #
 # the variables $url and $shcommand needs to be adapted to your setup
 # also, you might want to change the $ItemName to diffrent names of your desire.
 # You can get a list of sensor ids and thier names looking in the "sensors" table in the "ems_data" database
 ####################
-<?php
 # adapt this to your mysql setup
 $mysql_host = "localhost";
 $mysql_user = "emsusername";
